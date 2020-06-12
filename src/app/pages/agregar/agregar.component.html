@@ -1,0 +1,10 @@
+<h1>Agregar Tarea</h1>
+<form [formGroup]="forma" (ngSubmit)="guardar()">
+    <div class="form-group">
+        <label for="nombre">Nombre tarea</label>
+        <input formControlName="nombre" id="nombre" class="form-control" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-info" type="submit">Agregar</button>
+    </div>
+</form>

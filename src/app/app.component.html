@@ -1,24 +1,3 @@
 <div class="container">
-  <h1> Lista tareas </h1>
-
-  <div>
-    <table class="table">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">Id</th>
-          <th scope="col">Tarea</th>
-          <th scope="col">Estado</th>
-          <th scope="col">Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let tarea of tareas | async">
-          <th scope="row">{{ tarea.id }}</th>
-          <td>{{ tarea.nombre }}</td>
-          <td>{{ tarea.estado }}</td>
-          <td>eliminar</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <router-outlet></router-outlet>
 </div>

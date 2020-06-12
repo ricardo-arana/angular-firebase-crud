@@ -10,8 +10,8 @@ import { Tarea } from './models/tarea.model';
 })
 export class AppComponent {
   title = 'firebase';
-  tareas: Observable<Tarea[]>;
-  constructor(private appService: AppService) {
-    this.tareas = this.appService.obtenerTareas();
+  
+  constructor() {
+    
   }
 }

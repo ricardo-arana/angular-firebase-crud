@@ -22,4 +22,9 @@ export class AppService {
     }));
   }
 
+  agregarTarea(tarea: Tarea) {
+    return this.firestore.collection('tareas')
+    .add(tarea);
+  }
+
 }
