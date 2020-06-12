@@ -8,7 +8,7 @@ import { EditarComponent } from './pages/editar/editar.component';
 const routes: Routes = [
   {path: 'lista', component: ListaComponent},
   {path: 'agregar', component: AgregarComponent},
-  {path: 'editar', component: EditarComponent},
+  {path: 'editar/:id', component: EditarComponent},
   {path: '**', pathMatch: 'full', redirectTo: 'lista'}
 ];
 

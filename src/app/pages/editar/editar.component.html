@@ -1,1 +1,11 @@
-<p>editar works!</p>
+<h1>Editar</h1>
+<h5> tarea: {{id}}</h5>
+<form [formGroup]="forma" (ngSubmit)="editar()">
+    <div class="form-group">
+        <label for="nombre">Nombre tarea</label>
+        <input formControlName="nombre" id="nombre" class="form-control" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-info" type="submit">Editar</button>
+    </div>
+</form>
