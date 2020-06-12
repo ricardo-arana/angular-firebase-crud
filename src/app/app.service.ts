@@ -38,4 +38,9 @@ export class AppService {
       .doc(tarea.id).set(tarea);
   }
 
+  borrarTarea(id: string) {
+    return this.firestore.collection(this.tareaCollection)
+      .doc(id).delete();
+  }
+
 }
