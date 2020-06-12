@@ -3,7 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Tarea } from './models/tarea.model';
-
+import * as _ from 'lodash';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,9 +15,10 @@ export class AppService {
     return this.firestore.collection(this.tareaCollection)
     .valueChanges({ idField: 'id' })
     .pipe(map( obj => {
-      const tarea: Tarea[] = obj.map(
+      let tarea: Tarea[] = obj.map(
         (x:any) => ({id: x.id, nombre: x.nombre, estado: x.estado})
-      );
+      )
+      tarea = _.orderBy(tarea, ['estado'], ['desc'])
       return tarea;
     }));
   }
