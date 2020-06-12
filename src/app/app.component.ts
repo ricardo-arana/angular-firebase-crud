@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AppService } from './app.service';
+import { Tarea } from './models/tarea.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'firebase';
+  tareas: Observable<Tarea[]>;
+  constructor(private appService: AppService) {
+    this.tareas = this.appService.obtenerTareas();
+  }
 }

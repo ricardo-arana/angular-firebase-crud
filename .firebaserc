@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "my-crud-raranare": {
+      "hosting": {
+        "firebase": [
+          "my-crud-raranare"
+        ]
+      }
+    }
+  }
+}
